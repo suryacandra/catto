@@ -1,0 +1,17 @@
+<div class="flex flex-col gap-2 w-full border-2 border-black p-5">
+    <h1 class="text-center text-2xl font-bold">Example</h1>
+    <div class="flex flex-col gap-2 items-center">
+        <span>
+            Get random cat image
+        </span>
+        <span class="bg-slate-600 px-5 py-2 text-white font-mono text-sm">
+             <%= api.random %> 
+        </span>
+        <div>
+            <% for (i of random) { %>
+                <img src= <%= i.url %>  alt= <%= i.name %> class='w-full border-2 border-black' >
+            <% } %> 
+        </div>
+        <button class="px-5 py-2 bg-green-300 rounded-xl border-black border-2" id="fetch">Fetch again</button>
+    </div>
+</div>

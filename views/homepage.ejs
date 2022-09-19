@@ -1,0 +1,37 @@
+<div class="col-span-2 flex flex-col items-center gap-2 border-2 border-black p-5">
+    <h1 class="text-5xl font-mono font-bold tracking-widest">
+        Just cats nothing else.
+    </h1>
+    <div class="border-2 border-black bg-slate-400 p-2 m-5 w-full flex flex-col gap-2">
+        <span class="text-2xl font-bold text-center">
+            Available routes
+        </span>
+        <ul class="flex gap-2 w-full text-center">
+            <li class="p-1 border-2 bg-slate-300 text-sm w-full">
+                <p class="text-md font-bold text-green-900">GET all images JSON</p>
+                <br>
+                <%= api.all %> 
+            </li>
+            <li class="p-1 border-2 bg-slate-300 text-sm w-full">
+                <p class="text-md font-bold text-green-900">GET random images</p>
+                <br>
+                <%= api.random %> 
+            </li>
+            <li class="p-1 border-2 bg-slate-300 text-sm w-full">
+                <p class="text-md font-bold text-green-900">GET single image</p>
+                <br>
+                <%= api.single %> 
+            </li>
+        </ul>
+    </div>
+    <!-- For Upload -->
+    <!-- <div class="w-full border-2 border-black p-2">
+        <form action="/upload" enctype="multipart/form-data" method="post" class="flex flex-col gap-2 items-center">
+            <span>
+                Only PNG, JPG, JPEG.
+            </span>
+            <input type="file" name="file" class="border-2 border-black p-1">
+            <input type="submit" class="px-5 py-2 bg-green-300 rounded-full" value="Upload">
+        </form>
+    </div> -->
+</div>
