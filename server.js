@@ -20,25 +20,22 @@ app.use(upload());
 
 app.set("view engine", "ejs");
 app.set("views", "views");
-console.log(__dirname)
+console.log(__dirname);
 app.use(express.static(__dirname + "/public"));
 
-client.connect((err) => {
-  if (err) throw err;
-  console.log("connect success");
+client.connect()
 
-  app.use(indexRoute);
+app.use(indexRoute);
 
-  app.use(uploadRoute);
+app.use(uploadRoute);
 
-  app.use(getOneImageRoute);
+app.use(getOneImageRoute);
 
-  app.use(getRandomImageRoute);
+app.use(getRandomImageRoute);
 
-  app.use(getAllRoute);
+app.use(getAllRoute);
 
-  app.use(notFoundRoute);
-});
+app.use(notFoundRoute);
 
 app.listen(3000, () => {
   console.log("Server running in port 3000");
