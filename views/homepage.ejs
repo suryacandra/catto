@@ -6,32 +6,43 @@
         <span class="text-2xl font-bold text-center">
             Available routes
         </span>
-        <ul class="flex gap-2 w-full text-center">
+        <ul class="flex flex-col md:flex-row gap-2 w-full text-center">
             <li class="p-1 border-2 bg-slate-300 text-sm w-full">
                 <p class="text-md font-bold text-green-900">GET all images JSON</p>
                 <br>
+                <a href= <%= api.all %>>
                 <%= api.all %> 
+                </a>
             </li>
             <li class="p-1 border-2 bg-slate-300 text-sm w-full">
-                <p class="text-md font-bold text-green-900">GET random images</p>
+                <p class="text-md font-bold text-green-900">GET random image</p>
                 <br>
+                 <br>
+                <a href= <%= api.random %>>
                 <%= api.random %> 
+                </a>
             </li>
             <li class="p-1 border-2 bg-slate-300 text-sm w-full">
                 <p class="text-md font-bold text-green-900">GET single image</p>
                 <br>
+                 <br>
+                <a href= <%= api.single %>>
                 <%= api.single %> 
+                </a>
             </li>
         </ul>
     </div>
     <!-- For Upload -->
-    <!-- <div class="w-full border-2 border-black p-2">
-        <form action="/upload" enctype="multipart/form-data" method="post" class="flex flex-col gap-2 items-center">
-            <span>
-                Only PNG, JPG, JPEG.
-            </span>
-            <input type="file" name="file" class="border-2 border-black p-1">
-            <input type="submit" class="px-5 py-2 bg-green-300 rounded-full" value="Upload">
-        </form>
-    </div> -->
+    <div class="w-full border-2 border-black p-2">
+        <p>
+            Total images : <%= all.length %>
+        </p>
+        <!--<form action="/upload" enctype="multipart/form-data" method="post" class="flex flex-col gap-2 items-center">-->
+        <!--    <span>-->
+        <!--        Only PNG, JPG, JPEG.-->
+        <!--    </span>-->
+        <!--    <input type="file" name="file" class="border-2 border-black p-1">-->
+        <!--    <input type="submit" class="px-5 py-2 bg-green-300 rounded-full" value="Upload">-->
+        <!--</form>-->
+    </div>
 </div>
